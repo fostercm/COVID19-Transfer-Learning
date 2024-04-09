@@ -25,7 +25,7 @@ class MyDataset(torch_dataset):
         label=torch.tensor(self.labellist[idx], dtype=torch.int64)
         return I, label
 #%%
-def get_dataloader(path='C:/S224/'):    
+def get_dataloader(path='C:/Data/'):    
     df_train=pd.read_csv(path+'train.csv')
     dataset_train = MyDataset(path, df_train['filename'].values, df_train['label'].values)
     loader_train = torch_dataloader(dataset_train, batch_size=32, num_workers=0, shuffle=True, pin_memory=True)
