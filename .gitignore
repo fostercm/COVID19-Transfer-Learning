@@ -1,2 +1,4 @@
 Data
 __pycache__
+model.pt
+pre_trained_model.pt
